@@ -14,10 +14,14 @@ const orderSchema = new Schema({
   },
   items: [
     {
-      name: {
+      id: {
         type: mongoose.Schema.ObjectId,
         ref: 'Menu',
         required: [true, 'Menu item is required']
+      },
+      name: {
+        type: String,
+        required: true
       },
       quantity: {
         type: Number,
